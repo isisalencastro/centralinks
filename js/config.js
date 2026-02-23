@@ -24,13 +24,18 @@ const CONFIG = {
     },
     {
       title: "E-mail",
-      url: "mailto:contato@isisalencastro.com",
+      url: "mailto:alencastroisis@gmail.com",
       icon: "fas fa-envelope",
     },
     {
       title: "Portfólio",
       url: "https://isisalencastro.github.io/portfolio/",
       icon: "fas fa-briefcase",
+    },
+    {
+      title: "Currículo",
+      url: "https://scarce-pine-6ab.notion.site/ISIS-B-ALENCASTRO-30d15e550b9d80139abfe908a6b1f475",
+      icon: "fas fa-file-lines",
     },
     {
       title: "YouTube",

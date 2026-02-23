@@ -137,7 +137,7 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 635px;
+  max-width: 762px;
   padding: 32px 16px;
   margin: 0 auto;
   min-height: 100vh;
@@ -422,7 +422,7 @@ body {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
-    max-width: 606px;
+    max-width: 727px;
   }
 }
 
