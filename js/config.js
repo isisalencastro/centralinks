@@ -24,7 +24,7 @@ const CONFIG = {
     },
     {
       title: "E-mail",
-      url: "mailto:contato@isisalencastro.com",
+      url: "mailto:alencastroisis@gmail.com",
       icon: "fas fa-envelope",
     },
     {
@@ -34,7 +34,7 @@ const CONFIG = {
     },
     {
       title: "YouTube",
-      url: "https://youtube.com/@isisalencastro",
+      url: "https://www.youtube.com/@IsisAlencastro",
       icon: "fab fa-youtube",
     },
   ],
