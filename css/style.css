@@ -1,0 +1,530 @@
+/* ============================================
+   Isis Alencastro - Central de Links v1.0
+   ============================================ */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #667eea;
+  --primary-light: #7c94f4;
+  --secondary: #764ba2;
+  --bg-dark-1: #0f0c29;
+  --bg-dark-2: #302b63;
+  --bg-dark-3: #24243e;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-hover: rgba(255, 255, 255, 0.12);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 30px rgba(102, 126, 234, 0.3);
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: linear-gradient(135deg, var(--bg-dark-1), var(--bg-dark-2), var(--bg-dark-3));
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Background Particles --- */
+.bg-particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary), transparent);
+  opacity: 0;
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) scale(0);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+/* --- Container --- */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 16px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Card --- */
+.card {
+  width: 100%;
+  background: var(--card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-lg);
+  animation: cardAppear 0.8s var(--transition-smooth) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes cardAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Profile --- */
+.profile {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-fallback {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.avatar-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--primary));
+  background-size: 200% 200%;
+  animation: ringRotate 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes ringRotate {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--text-primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.profile-bio {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 300;
+  animation: fadeInUp 0.6s ease 0.45s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Social Icons Row --- */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.6s ease 0.55s both;
+}
+
+.social-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icon-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.social-icon-btn:hover {
+  color: var(--text-primary);
+  border-color: transparent;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: var(--shadow-glow);
+}
+
+.social-icon-btn:hover::before {
+  opacity: 1;
+}
+
+.social-icon-btn i {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Divider --- */
+.divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 12px;
+  animation: fadeInUp 0.6s ease 0.6s both;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--card-border), transparent);
+}
+
+.divider-icon {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* --- Links Section --- */
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  animation: linkAppear 0.5s ease both;
+  cursor: pointer;
+}
+
+.link-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--link-accent, var(--primary));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.link-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--link-accent, var(--primary)), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.link-item:hover {
+  transform: translateX(6px);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: var(--card-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.link-item:hover::before {
+  opacity: 1;
+}
+
+.link-item:hover::after {
+  opacity: 0.05;
+}
+
+.link-item:active {
+  transform: translateX(6px) scale(0.98);
+}
+
+@keyframes linkAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  color: var(--link-accent, var(--primary));
+  transition: all var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.link-item:hover .link-icon {
+  background: var(--link-accent, var(--primary));
+  color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+.link-text {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.link-arrow {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.link-item:hover .link-arrow {
+  color: var(--text-secondary);
+  transform: translateX(4px);
+}
+
+/* --- Footer --- */
+.card-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 300;
+  animation: fadeInUp 0.6s ease 1s both;
+}
+
+.card-footer a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.card-footer a:hover {
+  color: var(--text-primary);
+}
+
+/* --- Responsive --- */
+@media (max-width: 520px) {
+  .container {
+    padding: 16px 12px;
+  }
+
+  .card {
+    padding: 32px 20px;
+    border-radius: var(--radius-md);
+  }
+
+  .avatar-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-fallback {
+    font-size: 2rem;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-bio {
+    font-size: 0.88rem;
+  }
+
+  .link-item {
+    padding: 12px 14px;
+  }
+
+  .link-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 521px) and (max-width: 768px) {
+  .container {
+    max-width: 440px;
+  }
+}
+
+/* --- Accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .particle {
+    display: none;
+  }
+}
+
+/* --- Focus styles --- */
+.link-item:focus-visible,
+.social-icon-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* --- Selection --- */
+::selection {
+  background: var(--primary);
+  color: var(--text-primary);
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
