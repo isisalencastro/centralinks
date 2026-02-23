@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   initProfile();
-  initLinks();
   initYear();
+  buildLinks();
+  scheduleLinksReveal();
 });
 
 function initProfile() {
   const { name, bio } = CONFIG.profile;
-
   document.getElementById("profileName").textContent = name;
   document.getElementById("profileBio").textContent = bio;
 
@@ -15,17 +15,16 @@ function initProfile() {
   }
 }
 
-function initLinks() {
+function buildLinks() {
   const container = document.getElementById("linksSection");
   if (!CONFIG.links?.length) return;
 
-  CONFIG.links.forEach((link, index) => {
+  CONFIG.links.forEach((link) => {
     const el = document.createElement("a");
     el.href = link.url;
     el.target = "_blank";
     el.rel = "noopener noreferrer";
     el.className = "link-item";
-    el.style.animationDelay = `${0.5 + index * 0.08}s`;
 
     el.innerHTML = `
       <span class="link-icon"><i class="${link.icon}"></i></span>
@@ -35,6 +34,28 @@ function initLinks() {
 
     container.appendChild(el);
   });
+}
+
+function scheduleLinksReveal() {
+  const section = document.getElementById("linksSection");
+  const links = section.querySelectorAll(".link-item");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reducedMotion) {
+    section.classList.add("links-revealed");
+    links.forEach((link) => link.classList.add("link-visible"));
+    return;
+  }
+
+  setTimeout(() => {
+    section.classList.add("links-revealed");
+
+    links.forEach((link, i) => {
+      setTimeout(() => {
+        link.classList.add("link-visible");
+      }, i * 100);
+    });
+  }, 1800);
 }
 
 function initYear() {
