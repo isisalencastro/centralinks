@@ -5,29 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initProfile() {
-  const { name, bio, avatar, avatarFallback } = CONFIG.profile;
+  const { name, bio } = CONFIG.profile;
 
   document.getElementById("profileName").textContent = name;
   document.getElementById("profileBio").textContent = bio;
-
-  const avatarEl = document.getElementById("avatar");
-  const fallbackEl = document.getElementById("avatarFallback");
-
-  if (avatar) {
-    const img = new Image();
-    img.src = avatar;
-    img.alt = `Foto de ${name}`;
-    img.loading = "eager";
-
-    img.onload = () => {
-      fallbackEl.style.display = "none";
-      avatarEl.appendChild(img);
-    };
-  }
-
-  if (avatarFallback) {
-    fallbackEl.textContent = avatarFallback;
-  }
 
   if (CONFIG.meta?.title) {
     document.title = CONFIG.meta.title;
