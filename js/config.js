@@ -2,14 +2,14 @@ const CONFIG = {
   profile: {
     name: "Isis Alencastro",
     bio: "Desenvolvedora de Software | Analista de Marketing | Gestora de Automações com IA",
-    avatar: "assets/avatar.jpg",
+    avatar: "assets/avatar.png",
     avatarFallback: "IA",
   },
 
   links: [
     {
       title: "WhatsApp",
-      url: "https://wa.me/5551981541029",
+      url: "https://api.whatsapp.com/message/GGEAJPHMSN6MD1?autoload=1&app_absent=0",
       icon: "fab fa-whatsapp",
     },
     {
