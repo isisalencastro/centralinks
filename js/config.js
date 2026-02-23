@@ -9,7 +9,7 @@ const CONFIG = {
   links: [
     {
       title: "WhatsApp",
-      url: "https://wa.me/5500000000000",
+      url: "https://wa.me/5551981541029",
       icon: "fab fa-whatsapp",
     },
     {
@@ -24,17 +24,17 @@ const CONFIG = {
     },
     {
       title: "E-mail",
-      url: "mailto:contato@isisalencastro.com",
+      url: "mailto:alencastroisis@gmail.com",
       icon: "fas fa-envelope",
     },
     {
       title: "Portfólio",
-      url: "https://isisalencastro.com",
+      url: "https://isisalencastro.github.io/portfolio/",
       icon: "fas fa-briefcase",
     },
     {
       title: "YouTube",
-      url: "https://youtube.com/@isisalencastro",
+      url: "https://www.youtube.com/@IsisAlencastro",
       icon: "fab fa-youtube",
     },
   ],
