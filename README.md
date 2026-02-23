@@ -1,25 +1,36 @@
 # Central de Links - Isis Alencastro
 
-> Sistema de central de links estilo Linktree, personalizado para Isis Alencastro.
+> Central de links personalizada para Isis Alencastro — Desenvolvedora de Software, Analista de Marketing e Gestora de Automações com IA.
 
-![Version](https://img.shields.io/badge/versão-1.0.0-blueviolet)
+![Version](https://img.shields.io/badge/versão-1.0.0-blue)
 ![License](https://img.shields.io/badge/licença-MIT-green)
 ![Status](https://img.shields.io/badge/status-produção-brightgreen)
 
 ## Sobre
 
-Uma página de links centralizada e elegante, com design moderno e responsivo. Permite que todos os links importantes (redes sociais, contatos, conteúdos) fiquem reunidos em um único lugar acessível.
+Página de links centralizada com design limpo, moderno e profissional no estilo **card arredondado** com tema **branco e azul**. Reúne todos os links importantes em um único lugar.
 
 ### Funcionalidades
 
-- **Design moderno** com efeitos de glassmorphism e gradientes
-- **Totalmente responsivo** — funciona em qualquer dispositivo
+- **Design card + redondo** — Cartão branco com bordas arredondadas e botões em formato pill
+- **Tema branco e azul** — Visual limpo e profissional
+- **Totalmente responsivo** — Funciona em qualquer dispositivo
 - **Animações suaves** com respeito a preferências de acessibilidade (`prefers-reduced-motion`)
-- **Configuração centralizada** — todos os links e textos são editáveis via um único arquivo (`js/config.js`)
+- **Configuração centralizada** — Todos os links e textos são editáveis via `js/config.js`
 - **SEO otimizado** com meta tags Open Graph e Twitter Card
 - **Acessível** seguindo boas práticas de ARIA e navegação por teclado
-- **Leve e rápido** — sem frameworks pesados, apenas HTML, CSS e JavaScript puro
-- **Partículas animadas** no fundo para um visual premium
+- **Leve e rápido** — HTML, CSS e JavaScript puro, sem frameworks
+
+### Links incluídos
+
+| Link | Descrição |
+|------|-----------|
+| WhatsApp | Contato direto via WhatsApp Web |
+| LinkedIn | Perfil profissional |
+| GitHub | Repositórios e projetos |
+| E-mail | Contato por e-mail |
+| Portfólio | Site pessoal / portfólio |
+| YouTube | Canal no YouTube |
 
 ## Estrutura do Projeto
 
@@ -27,14 +38,15 @@ Uma página de links centralizada e elegante, com design moderno e responsivo. P
 centralinks/
 ├── index.html          # Página principal
 ├── css/
-│   └── style.css       # Estilos do projeto
+│   └── style.css       # Estilos (tema branco e azul)
 ├── js/
-│   ├── config.js       # Configuração de links, perfil e tema
+│   ├── config.js       # Configuração de links e perfil
 │   └── main.js         # Lógica JavaScript
 ├── assets/
 │   ├── favicon.svg     # Ícone do site
 │   ├── avatar.jpg      # Foto de perfil (adicionar manualmente)
 │   └── og-image.jpg    # Imagem para compartilhamento (adicionar manualmente)
+├── .gitignore
 ├── README.md           # Este arquivo
 ├── CHANGELOG.md        # Histórico de versões
 └── LICENSE             # Licença MIT
@@ -45,7 +57,7 @@ centralinks/
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/centralinks.git
+git clone https://github.com/isisalencastro/centralinks.git
 cd centralinks
 ```
 
@@ -54,9 +66,7 @@ cd centralinks
 Edite o arquivo `js/config.js` para configurar:
 
 - **Perfil**: nome, bio e foto
-- **Links**: título, URL, ícone e cor de cada link
-- **Ícones sociais**: links rápidos exibidos abaixo do perfil
-- **Tema**: cores e gradientes
+- **Links**: título, URL e ícone de cada link
 - **Meta tags**: informações para SEO e compartilhamento
 
 Exemplo de como adicionar um novo link:
@@ -66,7 +76,6 @@ Exemplo de como adicionar um novo link:
   title: "Meu Site",
   url: "https://meusite.com",
   icon: "fas fa-globe",
-  color: "#4A90D9",
 }
 ```
 
@@ -88,19 +97,15 @@ O projeto é composto por arquivos estáticos e pode ser publicado em qualquer s
 
 ## Personalização
 
-### Alterando o Tema
+### Alterando os Links
 
-No arquivo `js/config.js`, modifique o objeto `theme`:
+No arquivo `js/config.js`, modifique o array `links`. Cada link possui:
 
-```javascript
-theme: {
-  primaryGradient: ["#667eea", "#764ba2"],
-  backgroundGradient: ["#0f0c29", "#302b63", "#24243e"],
-  cardBackground: "rgba(255, 255, 255, 0.08)",
-  textColor: "#ffffff",
-  accentColor: "#667eea",
-}
-```
+| Propriedade | Descrição |
+|-------------|-----------|
+| `title` | Texto exibido no botão |
+| `url` | URL de destino |
+| `icon` | Classe do ícone Font Awesome |
 
 ### Ícones Disponíveis
 
@@ -114,14 +119,12 @@ O projeto utiliza [Font Awesome 6](https://fontawesome.com/icons). Para encontra
 
 O projeto usa duas fontes do Google Fonts:
 - **Inter** — Para textos gerais
-- **Playfair Display** — Para o nome do perfil
-
-Para alterar, edite os links no `<head>` do `index.html`.
+- **Poppins** — Para o nome do perfil
 
 ## Tecnologias
 
 - HTML5 semântico
-- CSS3 (Flexbox, animações, glassmorphism, variáveis CSS)
+- CSS3 (Flexbox, variáveis CSS, animações, design responsivo)
 - JavaScript ES6+ (vanilla)
 - [Font Awesome 6](https://fontawesome.com/) — Ícones
 - [Google Fonts](https://fonts.google.com/) — Tipografia
@@ -130,20 +133,20 @@ Para alterar, edite os links no `<head>` do `index.html`.
 
 | Navegador | Suporte |
 |-----------|---------|
-| Chrome 80+ | ✅ |
-| Firefox 78+ | ✅ |
-| Safari 14+ | ✅ |
-| Edge 80+ | ✅ |
-| Opera 67+ | ✅ |
-| Mobile browsers | ✅ |
+| Chrome 80+ | Sim |
+| Firefox 78+ | Sim |
+| Safari 14+ | Sim |
+| Edge 80+ | Sim |
+| Opera 67+ | Sim |
+| Mobile browsers | Sim |
 
 ## Licença
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
-## Autor
+## Autora
 
-Desenvolvido para **Isis Alencastro**.
+**Isis Alencastro** — Desenvolvedora de Software | Analista de Marketing | Gestora de Automações com IA
 
 ---
 

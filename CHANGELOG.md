@@ -9,17 +9,18 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ### Adicionado
 
-- Página principal com design moderno estilo glassmorphism
+- Página principal com design card arredondado no tema branco e azul
+- Perfil profissional: Desenvolvedora de Software, Analista de Marketing, Gestora de Automações com IA
 - Sistema de configuração centralizado via `js/config.js`
-- Perfil com foto, nome e bio
-- Seção de links com ícones, cores personalizadas e animações
-- Barra de ícones sociais rápidos
-- Partículas animadas no fundo
+- Links: WhatsApp, LinkedIn, GitHub, E-mail, Portfólio, YouTube
+- Avatar com fallback de iniciais e borda azul
+- Botões de link em formato pill (totalmente arredondados)
+- Efeito hover com preenchimento azul gradiente
+- Elementos decorativos de fundo com círculos azuis desfocados
 - Design totalmente responsivo (mobile-first)
 - Suporte a acessibilidade (ARIA labels, `prefers-reduced-motion`, navegação por teclado)
 - Meta tags para SEO (Open Graph, Twitter Card)
-- Favicon SVG personalizado
-- Animações suaves de entrada (fade-in, slide)
-- Efeito hover com destaque lateral nos links
-- Documentação completa (README.md)
+- Favicon SVG nas cores do tema
+- Animações suaves de entrada
+- Documentação completa (README.md, CHANGELOG.md)
 - Licença MIT
