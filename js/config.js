@@ -34,7 +34,7 @@ const CONFIG = {
     },
     {
       title: "Currículo",
-      url: "https://scarce-pine-6ab.notion.site/ISIS-B-ALENCASTRO-30d15e550b9d80139abfe908a6b1f475",
+      url: "https://docs.google.com/document/d/1odVQeTBHiZqzLctzOp_uF-rWZt8id8FwXaP7jK0039Q/edit?usp=drive_link",
       icon: "fas fa-file-lines",
     },
     {
