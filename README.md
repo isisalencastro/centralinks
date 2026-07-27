@@ -1,6 +1,6 @@
 # Central de Links - Isis Alencastro
 
-> Central de links personalizada para Isis Alencastro — Desenvolvedora de Software, Analista de Marketing e Gestora de Automações com IA.
+> Central de links personalizada para Isis Alencastro — Desenvolvedora de Software
 
 ![Version](https://img.shields.io/badge/versão-2.0.0-blue)
 ![License](https://img.shields.io/badge/licença-MIT-green)
