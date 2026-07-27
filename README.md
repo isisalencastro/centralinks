@@ -27,7 +27,6 @@ Página de links centralizada com design limpo, moderno e profissional no estilo
 
 | Link | Descrição |
 |------|-----------|
-| WhatsApp | Contato direto via WhatsApp Web |
 | LinkedIn | Perfil profissional |
 | GitHub | Repositórios e projetos |
 | E-mail | Contato por e-mail |
@@ -161,7 +160,7 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Autora
 
-**Isis Alencastro** — Desenvolvedora de Software | Analista de Marketing | Gestora de Automações com IA
+**Isis Alencastro** — Desenvolvedora de Software
 
 ---
 

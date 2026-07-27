@@ -3,7 +3,7 @@ const CONFIG = {
     name: "Isis Alencastro",
     bio: "Desenvolvedora de Software",
     avatar: "assets/avatar.png",
-    avatarFallback: "IA",
+    avatarFallback: "DEV",
   },
 
   links: [
@@ -42,7 +42,7 @@ const CONFIG = {
   meta: {
     title: "Isis Alencastro | Links",
     description: "Desenvolvedora de Software",
-    keywords: "Isis Alencastro, desenvolvedora, software, marketing, automações, IA, links",
+    keywords: "Isis Alencastro, desenvolvedora, software, links",
     ogImage: "assets/og-image.jpg",
     language: "pt-BR",
   },

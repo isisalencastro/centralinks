@@ -18,7 +18,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ### Alterado
 
-- Links atualizados: WhatsApp (link real), Portfólio (GitHub Pages), E-mail (Gmail)
+- Links atualizados: Portfólio (GitHub Pages), E-mail (Gmail)
 - Avatar agora usa imagem direta no HTML em vez de fallback JS
 - Largura do card aumentada para melhor leitura
 - CSS refatorado para trabalhar em conjunto com Tailwind
@@ -35,9 +35,9 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 ### Adicionado
 
 - Página principal com design card arredondado no tema branco e azul
-- Perfil profissional: Desenvolvedora de Software, Analista de Marketing, Gestora de Automações com IA
+- Perfil profissional: Desenvolvedora de Software
 - Sistema de configuração centralizado via `js/config.js`
-- Links: WhatsApp, LinkedIn, GitHub, E-mail, Portfólio, YouTube
+- Links: LinkedIn, GitHub, E-mail, Portfólio, YouTube
 - Avatar com fallback de iniciais e borda azul
 - Botões de link em formato pill (totalmente arredondados)
 - Efeito hover com preenchimento azul gradiente
