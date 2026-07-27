@@ -8,11 +8,6 @@ const CONFIG = {
 
   links: [
     {
-      title: "WhatsApp",
-      url: "https://api.whatsapp.com/message/GGEAJPHMSN6MD1?autoload=1&app_absent=0",
-      icon: "fab fa-whatsapp",
-    },
-    {
       title: "LinkedIn",
       url: "https://linkedin.com/in/isisalencastro",
       icon: "fab fa-linkedin-in",
@@ -46,7 +41,7 @@ const CONFIG = {
 
   meta: {
     title: "Isis Alencastro | Links",
-    description: "Desenvolvedora de Software, Analista de Marketing e Gestora de Automações com IA. Encontre todos os meus links em um só lugar.",
+    description: "Desenvolvedora de Software",
     keywords: "Isis Alencastro, desenvolvedora, software, marketing, automações, IA, links",
     ogImage: "assets/og-image.jpg",
     language: "pt-BR",
