@@ -1,7 +1,7 @@
 const CONFIG = {
   profile: {
     name: "Isis Alencastro",
-    bio: "Desenvolvedora de Software | Analista de Marketing | Gestora de Automações com IA",
+    bio: "Desenvolvedora de Software",
     avatar: "assets/avatar.png",
     avatarFallback: "IA",
   },
