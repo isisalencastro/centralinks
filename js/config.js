@@ -29,7 +29,7 @@ const CONFIG = {
     },
     {
       title: "Currículo",
-      url: "https://docs.google.com/document/d/1odVQeTBHiZqzLctzOp_uF-rWZt8id8FwXaP7jK0039Q/edit?usp=drive_link",
+      url: "assets/pdfs/Isis%20Alencastro%20-%20Curr%C3%ADculo.pdf",
       icon: "fas fa-file-lines",
     },
     {
