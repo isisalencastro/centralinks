@@ -1,0 +1,14 @@
+{
+  "name": "centralinks",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Central de links da Isis Alencastro",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "license": "MIT"
+}

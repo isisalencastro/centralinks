@@ -281,3 +281,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* --- Ícones SVG inline --- */
+/* Substituem a webfont do Font Awesome: herdam a cor e o tamanho do pai. */
+.icone {
+  width: 1em;
+  height: 1em;
+  display: block;
+  fill: currentColor;
+}
+

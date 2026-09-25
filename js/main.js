@@ -8,11 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
 function initProfile() {
   const { name, bio } = CONFIG.profile;
   document.getElementById("profileName").textContent = name;
-  document.getElementById("profileBio").textContent = bio;
+
+  const bioEl = document.getElementById("profileBio");
+  bioEl.textContent = bio;
 
   if (CONFIG.meta?.title) {
     document.title = CONFIG.meta.title;
   }
+}
+
+function linkExterno(url) {
+  return /^https?:\/\//i.test(url);
 }
 
 function buildLinks() {
@@ -22,14 +28,21 @@ function buildLinks() {
   CONFIG.links.forEach((link) => {
     const el = document.createElement("a");
     el.href = link.url;
-    el.target = "_blank";
-    el.rel = "noopener noreferrer";
     el.className = "link-item";
 
+    if (linkExterno(link.url)) {
+      el.target = "_blank";
+      // "me" liga os perfis sociais a esta página (verificação de identidade)
+      el.rel = "noopener noreferrer me";
+    }
+
+    const icone = ICONES[link.icon] || "";
+    const seta = ICONES.arrow;
+
     el.innerHTML = `
-      <span class="link-icon"><i class="${link.icon}"></i></span>
+      <span class="link-icon">${icone}</span>
       <span class="link-text">${link.title}</span>
-      <span class="link-arrow"><i class="fas fa-arrow-right"></i></span>
+      <span class="link-arrow">${seta}</span>
     `;
 
     container.appendChild(el);
